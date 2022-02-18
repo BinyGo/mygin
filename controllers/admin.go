@@ -69,7 +69,7 @@ func AdminList(c *gin.Context) {
 
 	admins := models.GetAdminList(list.Limit, offset)
 	count := models.GetAdminCount()
-	//!!!问题:日期格式如何处理,当前结构体存的是时间戳,如何接续为常用时间格式
+	
 	if len(admins) > 0 {
 		resultdata := make(map[string]interface{})
 		resultdata["data"] = admins
